@@ -5,13 +5,13 @@ import ShortUniqueId from "short-unique-id"
 import { authenticate } from "../plugins/authenticate"
 
 export async function pollRoutes(fastify: FastifyInstance) {
-    fastify.get('/poll/count', async () => {
+    fastify.get('/pool/count', async () => {
     const count = await prisma.pool.count()
 
     return { count }
   })
 
-  fastify.post('/poll', async (request, reply) => {
+  fastify.post('/pools', async (request, reply) => {
     const createPoolBody = z.object({
       title: z.string(),
     })

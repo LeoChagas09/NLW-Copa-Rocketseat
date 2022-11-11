@@ -12,7 +12,7 @@ export function SignIn() {
 
   return (
     <Center flex={1} bgColor="gray.900" p={7}>
-      <Logo width={212} height={40}/>
+      <Logo width={212} height={40} />
 
       <Button 
         type="SECONDARY"
@@ -21,7 +21,7 @@ export function SignIn() {
         mt={12}
         onPress={singIn}
         isLoading={isUserLoading}
-         _loading={{
+        _loading={{
           _spinner: { color: 'white' }
         }}
       />
